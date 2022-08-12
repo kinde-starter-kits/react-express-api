@@ -34,7 +34,7 @@ You will also need to set the url they will be redirected to upon logout. Set th
 
 ## Start your app
 
-Run `npm start` in a terminal and navigate to `http://localhost:3000`.
+From the `/client` directory run `npm start` in a terminal and navigate to `http://localhost:3000`.
 
 Click on `Sign up` and register your first user for your business!
 
