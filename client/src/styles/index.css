@@ -50,6 +50,12 @@ body {
   font-family: var(--g-font-family);
 }
 
+button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
