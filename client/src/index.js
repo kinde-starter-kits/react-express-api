@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./styles/index.css";
 import { KindeProvider } from "@kinde-oss/kinde-auth-react";
-import { BrowserRouter as Router } from "react-router-dom";
-import App from "./pages/App/App";
+import App from "./pages/App";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
     <KindeProvider
@@ -14,9 +14,7 @@ root.render(
       logoutUri={process.env.REACT_APP_KINDE_LOGOUT_URL}
       redirectUri={process.env.REACT_APP_KINDE_REDIRECT_URL}
     >
-      <Router>
-        <App />
-      </Router>
+      <App />
     </KindeProvider>
   </React.StrictMode>
 );
