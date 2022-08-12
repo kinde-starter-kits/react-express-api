@@ -12,7 +12,7 @@ The React frontend of the application lives in the `client` folder and the Expre
 
 In the `client` make a copy of `.env_sample` and name it simply `.env`. Set the following variable with the `Token host` value from the Kinde `App Keys` page
 
-folder make a copy of `.env_sample` and name it simply `.env`. Rename the value of `REACT_APP_KINDE_DOMAIN` environment variable to be the subdomain you set up on Kinde.
+Rename the value of `REACT_APP_KINDE_DOMAIN` environment variable to be the subdomain you set up on Kinde.
 
 e.g
 
@@ -32,8 +32,12 @@ On the App Keys page set `Redirect url` to `http://localhost:3000`
 
 You will also need to set the url they will be redirected to upon logout. Set the `Logout url` to http://localhost:3000.
 
-## Start the app
+## Start your app
 
-`npm start` and navigate to `http://localhost:3000`.
+Run `npm start` in a terminal and navigate to `http://localhost:3000`.
 
 Click on `Sign up` and register your first user for your business!
+
+## View users in Kinde
+
+If you navigate to the "Users" page within Kinde you will see your newly registered user there.
