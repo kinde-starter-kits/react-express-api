@@ -2,7 +2,7 @@ const kindeAuthExpress = require("@kinde-oss/kinde-node-express-api");
 
 let authenticate;
 (async () => {
-  authenticate = await kindeAuthExpress("resk.kinde.com");
+  authenticate = await kindeAuthExpress(process.env.KINDE_URL);
 })();
 
 module.exports = (req, res, next) => {

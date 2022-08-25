@@ -1,8 +1,25 @@
+import { useState } from "react";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 
 export default function LoggedIn() {
-  const { user, logout } = useKindeAuth();
-  console.log(user);
+  const { user, logout, getToken } = useKindeAuth();
+  const [books, setBooks] = useState([]);
+
+  const fetchBooks = async () => {
+    try {
+      const accessToken = await getToken();
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/books`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+      const { data } = await res.json();
+      setBooks(data.books);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <>
       <header>
@@ -37,6 +54,14 @@ export default function LoggedIn() {
           </div>
           <section className="next-steps-section">
             <h2 className="text-heading-1">Next steps for you</h2>
+            <button className="btn btn-dark" type="button" onClick={fetchBooks}>
+              Fetch books
+            </button>
+            <ul>
+              {books
+                ? books.map((item) => <li key={item.id}>{item.title}</li>)
+                : null}
+            </ul>
           </section>
         </div>
       </main>

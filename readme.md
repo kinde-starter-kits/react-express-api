@@ -41,3 +41,19 @@ Click on `Sign up` and register your first user for your business!
 ## View users in Kinde
 
 If you navigate to the "Users" page within Kinde you will see your newly registered user there.
+
+## Setup the server
+
+In a terminal `cd` into the server directory and run `npm i` to install dependencies.
+
+Duplicate the`.env_sample` file here and name it simply `.env`
+
+Replace `KINDE_URL` with the Token Host from your Kinde App.
+
+Run `npm start` to boot up the Express server on port 5000. You can test the health check endpoint by visiting [http://localhost:5000/v1](http://localhost:5000/v1) in the browser which should return JSON with a 200 reponse code and a status of `running`.
+
+## Test protected endpoints
+
+In the browser with a logged in user click the "Fetch books" button.
+
+This will render a list of books fetched from the protected API.
