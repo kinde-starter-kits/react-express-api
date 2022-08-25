@@ -53,7 +53,7 @@ Make a copy of `.env_sample` and name it simply `.env`. Rename the value of `KIN
 e.g
 
 ```
-REACT_APP_KINDE_DOMAIN=https://your_kinde_subdomain.kinde.com
+KINDE_URL=https://your_kinde_subdomain.kinde.com
 ```
 
 Run `npm start` to boot up the Express server on port 5000.
