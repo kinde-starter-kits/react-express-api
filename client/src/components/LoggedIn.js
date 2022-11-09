@@ -27,8 +27,8 @@ export default function LoggedIn() {
           <h1 className="text-display-3">KindeAuth</h1>
           <div className="profile-blob">
             <div className="avatar">
-              {user.first_name[0]}
-              {user.first_name[1]}
+              {user.given_name[0]}
+              {user.given_name[1]}
             </div>
             <div>
               <p className="text-heading-2">
