@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@kinde-oss/kinde-node-express-api": "^0.0.9",
+    "@kinde-oss/kinde-node-express-api": "^0.0.10",
     "cors": "^2.8.5",
     "express": "^4.17.1"
   },
